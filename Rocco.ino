@@ -40,7 +40,7 @@ void setup()
   //int angle[18] = {90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90};
   //Serial.begin(9600);  //create serial object
   delay(500);
-  Serial.begin(19200);
+  Serial.begin(9600);
   delay(500);
   //attach servos to pins
   servo[0].attach(2);
