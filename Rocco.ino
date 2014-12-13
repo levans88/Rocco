@@ -22,17 +22,18 @@ void softwareReboot(void);
 char incoming_serial;
 unsigned long servo_time = 0;
 int servo_speed = 25; //number of milliseconds per degree, 25 is a good very slow
+int servo_interval = 0;
+int servo_remainder = 0;
 boolean incoming_motion = false;
 int selected_servo = 0;
 int servo_quantity = 2; //zero indexed
 int angle[18] = {90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}; //*** WHY DOES THIS HAVE TO BE GLOBAL??? ***
-int angle_increment = 5;
 String str_angle = "";
 boolean incoming_angle = false;
 char motion_preset;
 Servo servo[18];
-
-
+int pot_pin = 2;
+int pot_val = 0;
 
 //-----Main-----
 void setup()
@@ -153,6 +154,31 @@ void loop()
     {
       incoming_motion = true;
     }
+    else if (incoming_serial == '[')
+    {
+      servo_speed -= 1;
+      Serial.println("Servo speed is: ");
+      Serial.println(servo_speed);
+    }
+    else if (incoming_serial == ']')
+    {
+      servo_speed += 1;
+      Serial.println("Servo speed is: ");
+      Serial.println(servo_speed);
+    }
+//    else if (incoming_serial == 'i')
+//    {
+//      if (servo_interval < 30)
+//      {
+//        servo_interval += 1;
+//      }
+//      else
+//      {
+//        servo_interval = 1;
+//      }
+//      Serial.println("Servo interval is: ");
+//      Serial.println(servo_interval);
+//    }
     else //if incoming_serial isn't something we know...
     {
       Serial.println("Invalid request.");
@@ -246,11 +272,11 @@ void setAngle(char incoming_serial, int selected_servo)
     
     if (incoming_serial == '+')
     {  
-      _angleB = _angleA + angle_increment;
+      _angleB = _angleA + 5;
     }
     else if (incoming_serial == '-')
     {
-      _angleB = _angleA - angle_increment;
+      _angleB = _angleA - 5;
     }
     
     if (_angleB >= 45 && _angleB <= 145)
@@ -381,14 +407,58 @@ int motion(int angle[], int servo_speed)  //receive array of angles
         
         //for all servos
         for (int b=0; b<=2; b++)  
-        {
-          if (angle[b] > servo[b].read())
+        { 
+          pot_val = analogRead(pot_pin);
+          servo_interval = pot_val / 32;
+          //Serial.println(pot_val);
+          
+//          for (int x=32; x<=1024; x+32)
+//          {
+//            if (pot_val <= x && servo_interval != 1)
+//            {
+//              servo_interval -= 1;
+//            }
+//            else if (pot_val >= x && servo_interval != 1024)
+//            {
+//              servo_interval += 1;
+//            }
+//          }
+          
+          
+//          if (pot_val <= 774)
+//          {
+//            servo_interval = 1;
+//          }
+//          else if (pot_val <= 824)
+//          {
+//            servo_interval = 2;
+//          }
+//          else if (pot_val <= 874)
+//          {
+//            servo_interval = 3;
+//          }
+//          else if (pot_val <= 924)
+//          {
+//            servo_interval = 4;
+//          }
+//          else if (pot_val <= 974)
+//          {
+//            servo_interval = 5;
+//          }
+          
+          int _a = angle[b] - servo[b].read();
+          servo_remainder = abs(_a);
+          if (servo_interval > servo_remainder && servo_remainder != 0)
           {
-            servo[b].write(servo[b].read() + 5);    
+            servo[b].write(angle[b]);
+          }
+          else if (angle[b] > servo[b].read())
+          {
+            servo[b].write(servo[b].read() + servo_interval);    
           }
           else if (angle[b] < servo[b].read())
           {
-            servo[b].write(servo[b].read() - 5);
+            servo[b].write(servo[b].read() - servo_interval);
           }
           else
           {
