@@ -3,7 +3,7 @@ Rocco
 
 A hexapod robot built on an Arduino Mega 2560 R3.
 
-The code is somewhat (but not completely) written with 18 leg servos in mind. Only one leg is built currently, so I'm testing with three servos.
+The code is partially written with 18 leg servos in mind. Only one leg is built currently, so I'm testing with three servos.
 
 Please see the complete documentation on my blog at the link below.
 http://blog.lennyevans.net
