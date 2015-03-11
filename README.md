@@ -5,10 +5,10 @@ A hexapod robot built on an Arduino Mega 2560 R3.
 
 The code is partially written with 18 leg servos in mind. Only one leg is built currently, so I'm testing with three servos.
 
-Please see the complete documentation on my blog at the link below.
+Please see the complete documentation on my blog at the following link:
 http://blog.lennyevans.net
 
-This is an active project so please see issues and updates on GitHub as well.
+This is an active project so please see issues and updates on GitHub as well:
 https://github.com/levans88/Rocco/issues
 
 The main focus of the code right now is to read input over a serial connection and execute appropriate functions based on the characters received.  The core function handling movement is "motion".
