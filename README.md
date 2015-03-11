@@ -11,11 +11,14 @@ http://blog.lennyevans.net
 This is an active project so please see issues and updates on GitHub as well:
 https://github.com/levans88/Rocco/issues
 
-The main focus of the code right now is to read input over a serial connection and execute appropriate functions based on the characters received.  The core function handling movement is "motion".
+Focus
+-----
+
+The main focus of the code right now is to read input over a serial connection and execute appropriate functions (mostly movements) based on the characters received.  The core function handling movement is "motion".
 
 There are no inverse or forward kinematics involved, only motion presets which are defined in the motionPreset function.  Destination angles are set in that function as well and passed to the motion function to be executed.
 
-The motion function uses the servo_interval variable to determine how many degrees each servo should move at a time on the way to completing a motion.  It also uses the servo_speed variable to determine how frequently each servo should move on the way to completing a motion.
+The motion function uses the servo_interval variable to determine how many degrees each servo should move at a time on the way to completing a motion.  It also uses the servo_speed variable to determine how frequently each servo should move.
 
 Key List
 --------
