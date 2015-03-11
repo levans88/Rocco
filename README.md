@@ -45,7 +45,7 @@ Hardware potentiometer   |   Increase/decrease servo_interval - Rocco moves each
 
 "g"   |   Get angle of selected servo
 
-"m#" (1-3 currently)   |   Execute pre-coded motion
+"m##" (00-08 currently)   |   Execute preset motion
 
 "+"   |   Selected servo plus 5 degrees
 
