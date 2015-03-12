@@ -11,6 +11,9 @@ http://blog.lennyevans.net
 This is an active project so please see issues and updates on GitHub as well:
 https://github.com/levans88/Rocco/issues
 
+Finally, the model is available in exported formats in this repo or online at Tinkercad (it is not ready for 3D printing yet):
+https://tinkercad.com/things/i91TkKbNDc9
+
 Focus
 -----
 
