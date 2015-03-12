@@ -1,7 +1,7 @@
 These are all of the exported model files for Rocco from Tinkercad.
 
 The model is online here:
-https://www.tinkercad.com/things/i91TkKbNDc9-rocco-hexapod-final-not-accurate-for-printing
+https://tinkercad.com/things/i91TkKbNDc9
 
 It should not be printed to a 3D printer currently because the holes don't line up quite right.
 
