@@ -4,6 +4,8 @@
 
 //-----Servo Characteristics-----
 //
+//Wires:
+//
 // red = positive
 // brown = negative
 // orange = signal
@@ -16,6 +18,11 @@
 //
 //Code will only ask for angles between 45-145 regardless (for now)
 //
+//Arduino pins used:
+//
+// servo1 = pin 2
+// servo2 = pin 3
+// servo3 = pin 4
 
 
 //-----Prototypes-----
