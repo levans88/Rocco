@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="prefix0000_7bd4ac4ec7bfd26a3360d3ffa70c1c57_1" fritzingVersion="0.3.18" referenceFile="SMD_multilayer-capacitor_1206.fzp">
+ <version>4</version>
+ <author>André Knörig</author>
+ <title>Ceramic Capacitor</title>
+ <label>C</label>
+ <date>Sat Apr 22 2017</date>
+ <tags>
+  <tag>Capacitor</tag>
+  <tag>Ceramic Capacitor</tag>
+  <tag>fritzing core</tag>
+  <tag>SMD</tag>
+ </tags>
+ <properties>
+  <property name="family">capacitor [bidirectional]</property>
+  <property name="variant">variant 1</property>
+  <property name="voltage"></property>
+  <property name="capacitance">.33 uF</property>
+  <property name="package">1206 [SMD, multilayer]</property>
+  <property name="part number"></property>
+  <property name="layer"></property>
+ </properties>
+ <taxonomy>discreteParts.capacitor.ceramic</taxonomy>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0.33 uF multilayered Ceramic Capacitor&lt;/p>&lt;/body>&lt;/html></description>
+ <spice>
+  <line>C{instanceTitle} {net connector0} {net connector1} {capacitance} IC=0</line>
+ </spice>
+ <views>
+  <iconView>
+   <layers image="icon/prefix0000_7bd4ac4ec7bfd26a3360d3ffa70c1c57_1_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView flipvertical="true" fliphorizontal="true">
+   <layers image="breadboard/prefix0000_7bd4ac4ec7bfd26a3360d3ffa70c1c57_1_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/prefix0000_7bd4ac4ec7bfd26a3360d3ffa70c1c57_1_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/prefix0000_7bd4ac4ec7bfd26a3360d3ffa70c1c57_1_pcb.svg">
+    <layer layerId="copper1"/>
+    <layer layerId="silkscreen"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector type="male" id="connector0" name="0">
+   <description>pin0</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector0pin" legId="connector0leg" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector0terminal" svgId="connector0pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector0pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector1" name="1">
+   <description>pin1</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector1pin" legId="connector1leg" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector1terminal" svgId="connector1pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector1pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+</module>

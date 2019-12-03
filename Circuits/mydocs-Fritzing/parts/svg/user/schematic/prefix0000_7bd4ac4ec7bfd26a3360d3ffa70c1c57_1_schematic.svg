@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" height="0.309722in" version="1.2" viewBox="0 0 4.064 7.86694" baseProfile="tiny"  x="0in" width="0.16in" y="0in">
+    <desc>
+        <referenceFile>capacitor.svg</referenceFile>
+    </desc>
+    <g  gorn="0.0" id="schematic">
+        <line x2="2.032" class="other"  stroke-linecap="round" stroke-width="0.1524" x1="2.032" y2="3.17147" y1="2.66347" stroke="#000000"/>
+        <line x2="2.032" class="other"  stroke-linecap="round" stroke-width="0.1524" x1="2.032" y2="4.69547" y1="5.20347" stroke="#000000"/>
+        <rect height="0.508" class="other"  stroke-linecap="round" stroke-width="0" x="0" width="4.064" y="4.18747" fill="#000000" stroke="none"/>
+        <rect height="0.508" class="other"  stroke-linecap="round" stroke-width="0" x="0" width="4.064" y="3.17147" fill="#000000" stroke="none"/>
+        <line x2="2.032" class="pin" connectorname="1"  stroke-linecap="round" stroke-width="0.246944" gorn="0.0.4" id="connector1pin" x1="2.032" y2="2.66347" y1="0.123472" stroke="#787878"/>
+        <rect height="0.0001" class="terminal"  stroke-width="0" gorn="0.0.5" id="connector1terminal" x="2.032" width="0.0001" y="0.123472" fill="none" stroke="none"/>
+        <g  transform="translate(1.66158,1.39347)">
+            <g >
+                <g  transform="rotate(270)">
+                    <g >
+                        <text font-family="'Droid Sans'" class="text"  stroke-width="0" font-size="0.881944" x="0" y="0" fill="#8c8c8c" stroke="none" text-anchor="middle">1</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <line x2="2.032" class="pin" connectorname="2"  stroke-linecap="round" stroke-width="0.246944" gorn="0.0.7" id="connector0pin" x1="2.032" y2="5.20347" y1="7.74347" stroke="#787878"/>
+        <rect height="0.0001" class="terminal"  stroke-width="0" gorn="0.0.8" id="connector0terminal" x="2.032" width="0.0001" y="7.74347" fill="none" stroke="none"/>
+        <g  transform="translate(1.66158,6.47347)">
+            <g >
+                <g  transform="rotate(270)">
+                    <g >
+                        <text font-family="'Droid Sans'" class="text"  stroke-width="0" font-size="0.881944" x="0" y="0" fill="#8c8c8c" stroke="none" text-anchor="middle">2</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
