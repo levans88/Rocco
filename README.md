@@ -1,7 +1,7 @@
 Rocco
 =====
 
-A hexapod robot built on an Arduino Mega 2560 R3 using C.
+A hexapod robot built on an Arduino Mega 2560 R3 (AVR ATmega2560) written in C.
 
 
 Please see the complete documentation of the build process on my blog at the following link:
