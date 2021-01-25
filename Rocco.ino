@@ -477,12 +477,14 @@ void selectServo(char incoming_serial) {
 		Serial.println("After move back: ");
 		Serial.println(_a);
 	}
-	else if (_a = 145) {
-		servo[selected_servo].write(_a - 5);
-		_a -= 5;
-		delay(250);
-		servo[selected_servo].write(_a + 5);
-		_a += 5;
+	else { //if (_a = 145) {
+		//servo[selected_servo].write(_a - 5);
+		//_a -= 5;
+		//delay(250);
+		//servo[selected_servo].write(_a + 5);
+		//_a += 5;
+
+    Serial.println("BLA");
 	}
 
 	//***debug***
